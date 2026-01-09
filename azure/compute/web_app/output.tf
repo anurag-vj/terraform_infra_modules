@@ -1,4 +1,4 @@
-output "web_app" {
+output "web_app_ids" {
   description = "Web App details"
   value = {
     id = try(
