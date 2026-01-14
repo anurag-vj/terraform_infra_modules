@@ -16,7 +16,7 @@ variable "address_space" {
 
 variable "dns_servers" {
   type    = list(string)
-  default = {}
+  default = []
 }
 
 variable "tags" {
