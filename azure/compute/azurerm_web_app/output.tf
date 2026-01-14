@@ -1,5 +1,4 @@
 output "web_app_ids" {
-  description = "Web App details"
   value = {
     id = try(
       azurerm_linux_web_app.linux_web_app[0].id,
