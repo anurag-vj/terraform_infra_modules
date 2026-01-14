@@ -14,11 +14,8 @@ variable "address_space" {
   type = list(string)
 }
 
-variable "subnets" {
-  type = map(object({
-    subnet_name      = string
-    address_prefixes = list(string)
-  }))
+variable "dns_servers" {
+  type = optional(type(string))
 }
 
 variable "tags" {

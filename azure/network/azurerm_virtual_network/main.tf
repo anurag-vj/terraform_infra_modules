@@ -3,13 +3,6 @@ resource "azurerm_virtual_network" "virtual_network" {
   location            = var.location
   resource_group_name = var.resource_group_name
   address_space       = var.address_space
-
-  dynamic "subnet" {
-    for_each = var.subnets
-    content {
-      name             = subnet.value.subnet_name
-      address_prefixes = subnet.value.address_prefixes
-    }
-  }
-  tags = var.tags
+  dns_servers         = var.dns_servers
+  tags                = var.tags
 }
